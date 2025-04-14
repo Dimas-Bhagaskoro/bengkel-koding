@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nama')->max(255);
+            $table->string('name')->max(255);
             $table->string('email')->unique()->max(255);
             $table->string('password')->max(8);
             $table->string('no_hp')->max(50);
             $table->string('role')->default('user')->max(50);
+            $table->string('alamat')->max(255);
         });
     } 
 
