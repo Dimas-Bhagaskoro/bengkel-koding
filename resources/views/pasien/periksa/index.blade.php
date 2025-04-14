@@ -28,9 +28,9 @@
                 <div class="form-group mt-3">
                     <label for="dokter">Pilih Dokter</label>
                     <select class="form-control" id="dokter">
-                        <option>Value 1</option>
-                        <option>Value 2</option>
-                        <option>Value 3</option>
+                        <option>Dokter 1</option>
+                        <option>Dokter 2</option>
+                        <option>Dokter 3</option>
                     </select>
                 </div>
 

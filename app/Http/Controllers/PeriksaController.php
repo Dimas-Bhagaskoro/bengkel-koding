@@ -10,10 +10,4 @@ public function index()
     {
         return view('dokter/periksa.index');
     }
-
-    public function pasien()
-    {
-        return view('pasien/periksa.index');
-    }
-
 }

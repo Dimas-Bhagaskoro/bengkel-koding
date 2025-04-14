@@ -20,61 +20,30 @@
                 @endif>
 
      {{-- Kondisi sidebar --}}       
-                @if (request()->is('Dokter'))
-               <li class="nav-item">
-                <a href="/dokter/periksa" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Periksa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/dokter/obat" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Obat</p>
-                </a>
-                </li>
-            @else
-                <li class="nav-item">
-                <a href="/dokter/periksa" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Periksa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/dokter/obat" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Obat</p>
-                </a>
-                </li>
-            @endif
+     @auth
+    @if (Auth::user()->role == 'dokter')
+        <li class="nav-item">
+            <a href="{{ route('dokter') }}" class="nav-link">Dashboard Dokter</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('periksa.index') }}" class="nav-link">Periksa</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('obat.index') }}" class="nav-link">Obat</a>
+        </li>
+    @elseif (Auth::user()->role == 'pasien')
+        <li class="nav-item">
+            <a href="{{ route('pasien') }}" class="nav-link">Dashboard Pasien</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('riwayat.index') }}" class="nav-link">Riwayat Periksa</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('periksa.index') }}" class="nav-link">Daftar Periksa</a>
+        </li>
+    @endif
+@endauth
 
-            @if (request()->is('Pasien'))
-               <li class="nav-item">
-                <a href="/pasien/periksa" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Periksa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/pasien/riwayat" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Riwayat</p>
-                </a>
-                </li>
-            @else
-                <li class="nav-item">
-                <a href="/Pasien/periksa" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Periksa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/pasien/riwayat" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Riwayat</p>
-                </a>
-                </li>
-            @endif
             </ul>
         </nav>
     </div>

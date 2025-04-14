@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PeriksaController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\RiwayatController;
+use App\Http\Controllers\PeriksaPasienController;
 
 
 Route::get('/dokter', [HomeController::class, 'dokter'])-> name('dokter');
@@ -16,7 +17,7 @@ Route::resource('periksa', PeriksaController::class);
 Route::get('/pasien', [HomeController::class, 'pasien'])-> name('pasien');
 Route::prefix('pasien')->group (function(){
 Route::resource('riwayat', RiwayatController::class);
-Route::resource('periksa', PeriksaController::class);
+Route::resource('periksa', PeriksaPasienController::class);
 });
 
 
