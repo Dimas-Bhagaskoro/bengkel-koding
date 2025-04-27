@@ -26,7 +26,7 @@
             <a href="{{ route('dokter') }}" class="nav-link">Dashboard Dokter</a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('periksa.index') }}" class="nav-link">Periksa</a>
+            <a href="{{ route('memeriksa.index') }}" class="nav-link">Memeriksa</a>
         </li>
         <li class="nav-item">
             <a href="{{ route('obat.index') }}" class="nav-link">Obat</a>
@@ -39,7 +39,7 @@
             <a href="{{ route('riwayat.index') }}" class="nav-link">Riwayat Periksa</a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('periksa.index') }}" class="nav-link">Daftar Periksa</a>
+            <a href="{{ route('periksa.index') }}" class="nav-link">Periksa</a>
         </li>
     @endif
 @endauth

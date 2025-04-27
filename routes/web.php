@@ -10,14 +10,14 @@ use App\Http\Controllers\PeriksaPasienController;
 
 Route::get('/dokter', [HomeController::class, 'dokter'])-> name('dokter');
 Route::prefix('dokter')->group (function(){
-Route::resource('obat', ObatController::class);
-Route::resource('periksa', PeriksaController::class);
+    Route::resource('obat', ObatController::class);
+    Route::resource('memeriksa', PeriksaController::class);
 });
 
 Route::get('/pasien', [HomeController::class, 'pasien'])-> name('pasien');
 Route::prefix('pasien')->group (function(){
-Route::resource('riwayat', RiwayatController::class);
-Route::resource('periksa', PeriksaPasienController::class);
+    Route::resource('riwayat', RiwayatController::class);
+    Route::resource('periksa', PeriksaPasienController::class);
 });
 
 
