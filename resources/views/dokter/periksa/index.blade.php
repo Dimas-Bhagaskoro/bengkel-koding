@@ -94,7 +94,7 @@
                                         @foreach($periksa as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $item->pasien->nama }}</td>
+                                                <td>{{ $item->pasien->name }}</td>
                                                 <td>{{ $item->tgl_periksa ?? 'Belum ditentukan' }}</td>
                                                 <td>
                                                     @if($item->biaya_periksa)

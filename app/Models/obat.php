@@ -14,5 +14,4 @@ class obat extends Model
         'kemasan',
         'harga'
     ];
-
 }

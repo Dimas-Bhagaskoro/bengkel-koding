@@ -36,6 +36,7 @@
             <a href="{{ route('pasien') }}" class="nav-link">Dashboard Pasien</a>
         </li>
         <li class="nav-item">
+            
             <a href="{{ route('riwayat.index') }}" class="nav-link">Riwayat Periksa</a>
         </li>
         <li class="nav-item">
